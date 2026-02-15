@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
 {
-    #[Route('/', name: 'menucraft_homepage', methods: ['GET'])]
+    #[Route('/', name: 'homepage', methods: ['GET'])]
     public function index(): Response
     {
         /* return $this->json([
