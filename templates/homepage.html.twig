@@ -3,13 +3,29 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <div class="container mt-4">
-        <div class="jumbotron">
-            <h1 class="display-4">Bienvenue sur Menucraft!</h1>
-            <p class="lead">Découvrez des recettes délicieuses et faciles à préparer.</p>
-            <hr class="my-4">
-            <p>Explorez notre collection de recettes et trouvez l'inspiration pour votre prochain repas.</p>
-            <a class="btn btn-primary btn-lg" href="{{ path('menucraft_recipe_list') }}" role="button">Voir les recettes</a>
-        </div>
+<section
+    class="text-white text-center d-flex align-items-center"
+    class="homepage position-relative overflow-hidden"
+    style="height: 100vh;
+           background: linear-gradient(rgba(0,50,0,0.7), rgba(0,100,0,0.4)), 
+                       url('{{ asset('assets/images/bg.jpg') }}');
+           background-size: cover;
+           background-position: center;">
+    <div class="container">
+        <h1 class="display-1 fw-bold mb-4">
+            Protégeons Notre Planète
+        </h1>
+
+        <p class="lead fs-1 mb-5">
+            Un geste aujourd'hui pour un monde vert demain
+        </p>
+
+        <p  class="text-light fs-4 mb-3">
+            Agir Maintenant
+        </p>
+        <i class="bi bi-chevron-down display-6 text-light" href="#"></i>
+        
     </div>
+</section>
+
 {% endblock %}
