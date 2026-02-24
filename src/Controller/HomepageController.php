@@ -19,6 +19,6 @@ class HomepageController extends AbstractController
             'status' => 'success',
         ]);*/
 
-        return $this->render('index.html.twig');
+        return $this->render('homepage.html.twig');
     }
 }

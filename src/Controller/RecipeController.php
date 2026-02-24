@@ -17,7 +17,7 @@ class RecipeController extends AbstractController
 {
     
 
-    #[Route('/connexion', name: 'menucraft_recipe_list', methods: ['GET'])]
+    #[Route('/connexion', name: 'ecolito_recipe_list', methods: ['GET'])]
     public function list(): Response
     {
         //$recipes = $this->getRecipes();
@@ -27,7 +27,7 @@ class RecipeController extends AbstractController
         return $this->render('connexion.html.twig');
     }
 
-    #[Route('/recipes/create', name: 'menucraft_recipe_create', methods: ['GET', 'POST'])]
+    #[Route('/recipes/create', name: 'ecolito_recipe_create', methods: ['GET', 'POST'])]
     public function create(Request $request, EntityManagerInterface $entityManager): Response
     {
         $recipe = new Recipe();
@@ -41,7 +41,7 @@ class RecipeController extends AbstractController
             $entityManager->persist($recipe);
             $entityManager->flush();
 
-            return $this->redirectToRoute('menucraft_recipe_list');
+            return $this->redirectToRoute('ecolito_recipe_list');
         }
 
         return $this->render('recipe/create.html.twig', [
@@ -49,7 +49,7 @@ class RecipeController extends AbstractController
         ]);
     }
 
-    #[Route('/recipes/{id}', name: 'menucraft_recipe_read', methods: ['GET'])]
+    #[Route('/recipes/{id}', name: 'ecolito_recipe_read', methods: ['GET'])]
     public function read(Recipe $recipe): Response
     {
         //$recipes = $this->getRecipes();
@@ -66,7 +66,7 @@ class RecipeController extends AbstractController
         ]);
     }
 
-    #[Route('/recipes/{id}/update', name: 'menucraft_recipe_update', methods: ['GET', 'POST'])]
+    #[Route('/recipes/{id}/update', name: 'ecolito_recipe_update', methods: ['GET', 'POST'])]
     public function edit(Request $request, Recipe $recipe, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(RecipeType::class, $recipe, ['is_edit' => true]);
@@ -75,7 +75,7 @@ class RecipeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('menucraft_recipe_list');
+            return $this->redirectToRoute('ecolito_recipe_list');
         }
 
         return $this->render('recipe/edit.html.twig', [
@@ -84,7 +84,7 @@ class RecipeController extends AbstractController
         ]);
     }
 
-    #[Route('/recipes/delete/{id}', name: 'menucraft_recipe_delete', methods: ['GET'])]
+    #[Route('/recipes/delete/{id}', name: 'ecolito_recipe_delete', methods: ['GET'])]
     public function delete(Recipe $recipe, EntityManagerInterface $entityManager): Response
     {
         // Hard delete
@@ -93,7 +93,7 @@ class RecipeController extends AbstractController
         $recipe->setDeletedAt(new \DateTimeImmutable());
         $entityManager->flush();
 
-        return $this->redirectToRoute('menucraft_recipe_list');
+        return $this->redirectToRoute('ecolito_recipe_list');
     }
 
     private function getRecipes(): array

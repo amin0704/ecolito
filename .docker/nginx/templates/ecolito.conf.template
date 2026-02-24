@@ -1,7 +1,7 @@
 server {
     listen 80;
     server_name ${NGINX_BACKEND_DOMAIN};
-    root /var/www/menucraft/public;
+    root /var/www/ecolito/public;
 
     index index.php index.html index.htm;
 
