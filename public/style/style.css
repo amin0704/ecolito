@@ -1,0 +1,79 @@
+.id{
+  margin: 6px;
+}
+
+/* Video en fond pour qu'il prenne tout l'écran */
+.video-bg{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-bg video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navbar soit au dessus de la video */
+nav, .navbar{
+  position: relative;
+  z-index: 10;
+}
+
+/* enlever le blanc autour */
+body{
+  margin: 0;
+}
+.nav-on-top{
+  position: relative;
+  z-index: 10;
+}
+.logo-center{
+  position: relative;
+  z-index: 10;                 /* au-dessus de la vidéo */
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img{
+  width: 1050px;
+  max-width: 80%;
+  height: auto;
+}
+/* Navbar forme arrondi */
+.eco-pill-nav{
+  position: relative;
+  z-index: 20;
+  margin-top: 18px;
+  background: transparent !important;
+}
+
+.eco-pill-inner{
+  width: 700px;
+  max-width: 92%;
+  margin: 0 auto;
+  padding: 6px 14px;
+  background: rgba(120, 175, 55, 0.70);
+  border-radius: 9999px;
+  backdrop-filter: blur(6px);
+}
+
+
+/* liens */
+.eco-link{
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 14px !important;
+  border-radius: 9999px;
+}
+
+.eco-link:hover{
+  background: rgba(255,255,255,0.12);
+}
