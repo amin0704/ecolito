@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 final class ConsoAlimentsController extends AbstractController
 {
-    #[Route('/conso', name: 'conso_aliments')]
+    #[Route('/conso/aliments', name: 'form_aliments')]
     public function index(Request $request, EntityManagerInterface $em): Response
     {
         $conso = new ConsoAliments();
@@ -44,7 +44,7 @@ final class ConsoAlimentsController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($conso);
         $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('conso_aliments');
+        return $this->redirectToRoute('form_aliments');
     }
 
     return $this->render('consoaliments.html.twig', [

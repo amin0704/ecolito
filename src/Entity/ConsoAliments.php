@@ -15,9 +15,6 @@ class ConsoAliments
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $idUser = null;
-
-    #[ORM\Column]
     private ?float $poulet = null;
 
     #[ORM\Column]
@@ -68,15 +65,15 @@ class ConsoAliments
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
+    #[ORM\Column]
+    private ?int $idUser = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIdUser(): ?int
-    {
-        return $this->idUser;
-    }
+    
 
     public function setIdUser(int $idUser): static
     {
@@ -287,5 +284,10 @@ class ConsoAliments
         $this->date = $date;
 
         return $this;
+    }
+
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
     }
 }
