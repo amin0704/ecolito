@@ -20,6 +20,7 @@
         "symfony/framework-bundle": "7.2.*",
         "symfony/maker-bundle": "*",
         "symfony/http-client": "7.2.*",
+        "symfony/maker-bundle": "*",
         "symfony/runtime": "7.2.*",
         "symfony/security-bundle": "7.2.*",
         "symfony/twig-bundle": "7.2.*",

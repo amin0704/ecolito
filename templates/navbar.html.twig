@@ -23,10 +23,14 @@
         </li>
       </ul>
 
-      {# Zone droite : prénom + déconnexion #}
+      {# Zone droite : mon compte + déconnexion #}
       {% if app.user and is_granted('ROLE_USER') %}
+
+         <a class="nav-link text-light me-3" href="{{ path('app_account') }}">
+        Compte {{ app.user.prenom }}
+         </a>
         <span class="navbar-text text-light me-3">
-          Bonjour {{ app.user.prenom }}
+           
         </span>
         <a class="btn btn-outline-light" href="{{ path('app_logout') }}">
           Déconnexion
