@@ -26,7 +26,7 @@ final class SuggestionsController extends AbstractController
             $message = $message." A la date ".$r['date']." , j'ai parcouru ".$r['voiture']." km en voiture, ".$r['moto']." km en moto, ".$r['bus']." km en bus, ".$r['tramway']." km en tramway, ".$r['avion']." km en avion, ".$r['bateau']." km en bateau, ".$r['veloElectrique']." km en velo electrique, ".$r['veloMecanique']." km en velo mecanique, ".$r['train']." km en train, ".$r['metro']." km en metro, ".$r['rer']." km en rer. \n";
         }
         $message = $message.". Evalue ma consommation, suis-je plutot consommateur ou pas sur l'environnement ? Avec mes points forts et mes points faibles. structure ton texte ";
-        $rep = $client->request('POST', "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=AIzaSyAqXF3tbnvA88er2sIy3oqrqNhE7IFdLZk", [
+        $rep = $client->request('POST', "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=".$_ENV['MA_CLE_API'], [
             'json' => [
                 'contents' => [
                     [
