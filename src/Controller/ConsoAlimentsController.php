@@ -44,7 +44,7 @@ final class ConsoAlimentsController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($conso);
         $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('form_aliments');
+        return $this->redirectToRoute('consommation');
     }
 
     return $this->render('consoaliments.html.twig', [
