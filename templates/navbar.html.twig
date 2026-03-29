@@ -1,14 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-success">
   <div class="container-fluid">
-   <a class="navbar-brand text-light" href="{{path('homepage')}}">
-      
+    <a class="navbar-brand text-light" href="{{ path('homepage') }}">
       ECOLITO
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link text-light" href="#">Suivi</a>
         </li>
@@ -16,9 +19,19 @@
           <a class="nav-link text-light" href="{{path('suggestions')}}">Suggestions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{path('consommation')}}">Ma Consommation</a>
+          <a class="nav-link text-light" href="{{ path('consommation') }}">Ma Consommation</a>
         </li>
       </ul>
+
+      {# Zone droite : prénom + déconnexion #}
+      {% if app.user and is_granted('ROLE_USER') %}
+        <span class="navbar-text text-light me-3">
+          Bonjour {{ app.user.prenom }}
+        </span>
+        <a class="btn btn-outline-light" href="{{ path('app_logout') }}">
+          Déconnexion
+        </a>
+      {% endif %}
     </div>
   </div>
 </nav>

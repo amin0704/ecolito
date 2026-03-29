@@ -11,7 +11,12 @@
 	<body class="d-flex flex-column min-vh-100">
         
 
+  {# Afficher la navbar partout sauf sur la page de connexion #}
+  {% if app.request.attributes.get('_route') != 'app_login' %}
     {% include 'navbar.html.twig' %}
+  {% endif %}
+
+  
     {% block titre %} {% endblock %} 
     <main class="flex-grow-1">
       {% block body %}
@@ -19,8 +24,9 @@
       {% endblock %}
     </main>
 
-	{% include 'footer.html.twig' %}
-    
-
-	</body>
+  {# Afficher le footer partout sauf sur la page de connexion #}
+    {% if app.request.attributes.get('_route') != 'app_login' %}
+      {% include 'footer.html.twig' %}
+    {% endif %}
+</body>
 </html>
