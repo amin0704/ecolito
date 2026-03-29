@@ -28,7 +28,7 @@ final class AchatsController extends AbstractController
         $achats->setPantalon(0);
         $achats->setVeste(0);
         $achats->setManteau(0);
-        $achats->setProduitLivre(0);
+        $achats->setAchatEnLivraison(0);
         $achats->setLivre(0);
         $achats->setJournal(0);
         $achats->setTablette(0);
@@ -45,8 +45,9 @@ final class AchatsController extends AbstractController
 
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($achats);
-        $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('form_achats');
+        $em->flush();
+        $this->addFlash('success', 'Données entrées avec succès !');
+        return $this->redirectToRoute('consommation');
     }
 
     return $this->render('form_achats.html.twig', [

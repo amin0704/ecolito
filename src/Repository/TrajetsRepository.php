@@ -31,13 +31,14 @@ class TrajetsRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Trajets
-    //    {
-    //        return $this->createQueryBuilder('t')
-    //            ->andWhere('t.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+       public function getAllTrajets(): array
+       {
+           return $this->createQueryBuilder('t')
+               ->select('t.voiture AS voiture', 't.moto AS moto', 't.veloMecanique AS veloMecanique', 't.veloElectrique AS veloElectrique', 't.train AS train', 't.bus AS bus', 't.avion AS avion', 't.metro AS metro', 't.tramway AS tramway', 't.bateau AS bateau', 't.rer AS rer', 't.date AS date') 
+               ->where('t.idUser = :val')
+               ->setParameter('val', 1)
+               ->getQuery()
+               ->getScalarResult()
+           ;
+       }
 }

@@ -15,43 +15,43 @@ class Trajets
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $voiture = null;
+    private ?float $voiture = null;
 
     #[ORM\Column]
-    private ?int $train = null;
+    private ?float $train = null;
 
     #[ORM\Column]
-    private ?int $bus = null;
+    private ?float $bus = null;
 
     #[ORM\Column]
-    private ?int $avion = null;
+    private ?float $avion = null;
 
     #[ORM\Column]
-    private ?int $veloMecanique = null;
+    private ?float $veloMecanique = null;
 
     #[ORM\Column]
-    private ?int $veloElectrique = null;
+    private ?float $veloElectrique = null;
 
     #[ORM\Column]
-    private ?int $voitureElectrique = null;
+    private ?float $voitureElectrique = null;
 
     #[ORM\Column]
-    private ?int $moto = null;
+    private ?float $moto = null;
 
     #[ORM\Column]
-    private ?int $bateau = null;
+    private ?float $bateau = null;
 
     #[ORM\Column]
-    private ?int $metro = null;
+    private ?float $metro = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\Column]
-    private ?int $tramway = null;
+    private ?float $tramway = null;
 
     #[ORM\Column]
-    private ?int $rer = null;
+    private ?float $rer = null;
 
     #[ORM\Column]
     private ?int $idUser = null;
@@ -61,120 +61,120 @@ class Trajets
         return $this->id;
     }
 
-    public function getVoiture(): ?int
+    public function getVoiture(): ?float
     {
         return $this->voiture;
     }
 
-    public function setVoiture(int $voiture): static
+    public function setVoiture(float $voiture): static
     {
         $this->voiture = $voiture;
 
         return $this;
     }
 
-    public function getTrain(): ?int
+    public function getTrain(): ?float
     {
         return $this->train;
     }
 
-    public function setTrain(int $train): static
+    public function setTrain(float $train): static
     {
         $this->train = $train;
 
         return $this;
     }
 
-    public function getBus(): ?int
+    public function getBus(): ?float
     {
         return $this->bus;
     }
 
-    public function setBus(int $bus): static
+    public function setBus(float $bus): static
     {
         $this->bus = $bus;
 
         return $this;
     }
 
-    public function getAvion(): ?int
+    public function getAvion(): ?float
     {
         return $this->avion;
     }
 
-    public function setAvion(int $avion): static
+    public function setAvion(float $avion): static
     {
         $this->avion = $avion;
 
         return $this;
     }
 
-    public function getVeloMecanique(): ?int
+    public function getVeloMecanique(): ?float
     {
         return $this->veloMecanique;
     }
 
-    public function setVeloMecanique(int $veloMecanique): static
+    public function setVeloMecanique(float $veloMecanique): static
     {
         $this->veloMecanique = $veloMecanique;
 
         return $this;
     }
 
-    public function getVeloElectrique(): ?int
+    public function getVeloElectrique(): ?float
     {
         return $this->veloElectrique;
     }
 
-    public function setVeloElectrique(int $veloElectrique): static
+    public function setVeloElectrique(float $veloElectrique): static
     {
         $this->veloElectrique = $veloElectrique;
 
         return $this;
     }
 
-    public function getVoitureElectrique(): ?int
+    public function getVoitureElectrique(): ?float
     {
         return $this->voitureElectrique;
     }
 
-    public function setVoitureElectrique(int $voitureElectrique): static
+    public function setVoitureElectrique(float $voitureElectrique): static
     {
         $this->voitureElectrique = $voitureElectrique;
 
         return $this;
     }
 
-    public function getMoto(): ?int
+    public function getMoto(): ?float
     {
         return $this->moto;
     }
 
-    public function setMoto(int $moto): static
+    public function setMoto(float $moto): static
     {
         $this->moto = $moto;
 
         return $this;
     }
 
-    public function getBateau(): ?int
+    public function getBateau(): ?float
     {
         return $this->bateau;
     }
 
-    public function setBateau(int $bateau): static
+    public function setBateau(float $bateau): static
     {
         $this->bateau = $bateau;
 
         return $this;
     }
 
-    public function getMetro(): ?int
+    public function getMetro(): ?float
     {
         return $this->metro;
     }
 
-    public function setMetro(int $metro): static
+    public function setMetro(float $metro): static
     {
         $this->metro = $metro;
 
@@ -193,24 +193,24 @@ class Trajets
         return $this;
     }
 
-    public function getTramway(): ?int
+    public function getTramway(): ?float
     {
         return $this->tramway;
     }
 
-    public function setTramway(int $tramway): static
+    public function setTramway(float $tramway): static
     {
         $this->tramway = $tramway;
 
         return $this;
     }
 
-    public function getRer(): ?int
+    public function getRer(): ?float
     {
         return $this->rer;
     }
 
-    public function setRer(int $rer): static
+    public function setRer(float $rer): static
     {
         $this->rer = $rer;
 
