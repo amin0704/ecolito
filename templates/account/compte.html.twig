@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="mb-4">Mon compte</h1>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+
+    <div class="card" style="max-width: 600px;">
+        <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <span>Mes informations</span>
+
+            {% if not editMode %}
+                <a href="{{ path('app_account', { edit: 1 }) }}" class="btn btn-light btn-sm">
+                    Modifier
+                </a>
+            {% else %}
+                <a href="{{ path('app_account') }}" class="btn btn-outline-light btn-sm">
+                    Annuler
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="card-body">
+            {% if not editMode %}
+
+                {# MODE LECTURE #}
+                <p><strong>Nom :</strong> {{ app.user.nom }}</p>
+                <p><strong>Prénom :</strong> {{ app.user.prenom }}</p>
+                <p><strong>Email :</strong> {{ app.user.email }}</p>
+
+            {% else %}
+
+                {# MODE ÉDITION #}
+                {{ form_start(profileForm) }}
+                    {{ form_row(profileForm.nom) }}
+                    {{ form_row(profileForm.prenom) }}
+                    {{ form_row(profileForm.plainPassword) }}
+
+                    <div class="mb-3">
+                        <label class="form-label">Email (non modifiable)</label>
+                        <input class="form-control" value="{{ app.user.email }}" disabled>
+                    </div>
+
+                    <button class="btn btn-success" type="submit">
+                        Enregistrer
+                    </button>
+                {{ form_end(profileForm) }}
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
