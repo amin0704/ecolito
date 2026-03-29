@@ -19,7 +19,7 @@ class AchatsType extends AbstractType
             ->add('electromenager')
             ->add('veloMecanique')
             ->add('veloElectrique')
-            ->add('produitLivre')
+            ->add('achatEnLivraison')
             ->add('cosmetique')
             ->add('tshirt')
             ->add('chaussures')

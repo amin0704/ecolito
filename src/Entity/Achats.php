@@ -33,7 +33,7 @@ class Achats
     private ?int $veloElectrique = null;
 
     #[ORM\Column]
-    private ?int $produitLivre = null;
+    private ?int $achatEnLivraison = null;
 
     #[ORM\Column]
     private ?int $cosmetique = null;
@@ -157,14 +157,14 @@ class Achats
         return $this;
     }
 
-    public function getProduitLivre(): ?int
+    public function getAchatEnLivraison(): ?int
     {
-        return $this->produitLivre;
+        return $this->achatEnLivraison;
     }
 
-    public function setProduitLivre(int $produitLivre): static
+    public function setAchatEnLivraison(int $achatEnLivraison): static
     {
-        $this->produitLivre = $produitLivre;
+        $this->achatEnLivraison = $achatEnLivraison;
 
         return $this;
     }
