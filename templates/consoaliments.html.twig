@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block titre %} <h2>Consommation d'aliments</h2> {% endblock %}
+{% block body %}
+
+{{ form_start(form) }}
+<div id="formu">
+        {{ form_widget(form) }}
+        </div>
+{{ form_end(form) }}
+
+{% endblock %}
