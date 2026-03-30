@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{% block body %}
+<style>
+    .reset-page-wrapper {
+        height: 100vh;
+        overflow: hidden;
+        background: #e9f7ef;
+    }
+</style>
+
+<div class="reset-page-wrapper d-flex justify-content-center align-items-center">
+    <div class="card shadow-lg" style="max-width: 420px; width: 100%; border-radius: 1rem;">
+        <div class="card-header text-center text-white"
+             style="background-color: #198754; border-radius: 1rem 1rem 0 0;">
+            <h3 class="mb-0">Mot de passe oublié</h3>
+            <small class="text-light">Réinitialisez l’accès à votre espace Ecolito</small>
+        </div>
+
+        <div class="card-body p-4 bg-white">
+            {% for flash_error in app.flashes('reset_password_error') %}
+                <div class="alert alert-danger py-2">
+                    {{ flash_error }}
+                </div>
+            {% endfor %}
+
+            {{ form_start(requestForm) }}
+                <div class="mb-3">
+                    {{ form_label(requestForm.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(requestForm.email, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(requestForm.email) }}
+                </div>
+
+                <div class="mb-3">
+                    <small class="text-muted">
+                        Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.
+                    </small>
+                </div>
+
+                <button class="btn w-100 text-white" style="background-color: #198754;" type="submit">
+                    Envoyer l’email de réinitialisation
+                </button>
+            {{ form_end(requestForm) }}
+        </div>
+
+        <div class="card-footer text-center bg-white" style="border-radius: 0 0 1rem 1rem;">
+            <small class="text-muted">
+                Retour à la
+                <a href="{{ path('app_login') }}" class="text-success fw-semibold">connexion</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}

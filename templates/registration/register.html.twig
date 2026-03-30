@@ -1,0 +1,85 @@
+{# templates/registration/register.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<style>
+    .auth-page-wrapper {
+        height: 100vh;
+        overflow: hidden;
+        background: #e9f7ef;
+    }
+</style>
+
+<div class="auth-page-wrapper d-flex justify-content-center align-items-center">
+    <div class="card shadow-lg" style="max-width: 450px; width: 100%; border-radius: 1rem;">
+        <div class="card-header text-center text-white"
+             style="background-color: #198754; border-radius: 1rem 1rem 0 0;">
+            <h3 class="mb-0">Inscription</h3>
+            <small class="text-light">Créez votre compte Ecolito</small>
+        </div>
+
+        <div class="card-body p-4 bg-white">
+            {{ form_start(registrationForm) }}
+
+                {{ form_errors(registrationForm) }}
+
+                <div class="mb-3">
+                    {{ form_label(registrationForm.nom, 'Nom', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(registrationForm.nom, {
+                        'attr': {'class': 'form-control', 'placeholder': 'Dupont'}
+                    }) }}
+                    {{ form_errors(registrationForm.nom) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(registrationForm.prenom, 'Prénom', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(registrationForm.prenom, {
+                        'attr': {'class': 'form-control', 'placeholder': 'Jean'}
+                    }) }}
+                    {{ form_errors(registrationForm.prenom) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(registrationForm.email, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(registrationForm.email, {
+                        'attr': {'class': 'form-control', 'placeholder': 'vous@example.com'}
+                    }) }}
+                    {{ form_errors(registrationForm.email) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(registrationForm.plainPassword, 'Mot de passe', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(registrationForm.plainPassword, {
+                        'attr': {'class': 'form-control', 'placeholder': 'Choisissez un mot de passe'}
+                    }) }}
+                    {{ form_errors(registrationForm.plainPassword) }}
+                </div>
+
+                <div class="form-check mb-3">
+                    {{ form_widget(registrationForm.agreeTerms, {
+                        'attr': {'class': 'form-check-input'}
+                    }) }}
+                    {{ form_label(registrationForm.agreeTerms, "J'accepte les conditions", {
+                        'label_attr': {'class': 'form-check-label'}
+                    }) }}
+                    {{ form_errors(registrationForm.agreeTerms) }}
+                </div>
+
+                <button type="submit" class="btn w-100 text-white" style="background-color: #198754;">
+                    S'inscrire
+                </button>
+
+            {{ form_end(registrationForm) }}
+        </div>
+
+        <div class="card-footer text-center bg-white" style="border-radius: 0 0 1rem 1rem;">
+            <small class="text-muted">
+                Vous avez déjà un compte ?
+                <a href="{{ path('app_login') }}" class="text-success fw-semibold">Se connecter</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}

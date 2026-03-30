@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau mot de passe{% endblock %}
+
+{% block body %}
+<style>
+    .reset-page-wrapper {
+        height: 100vh;
+        overflow: hidden;
+        background: #e9f7ef;
+    }
+</style>
+
+<div class="reset-page-wrapper d-flex justify-content-center align-items-center">
+    <div class="card shadow-lg" style="max-width: 420px; width: 100%; border-radius: 1rem;">
+        <div class="card-header text-center text-white"
+             style="background-color: #198754; border-radius: 1rem 1rem 0 0;">
+            <h3 class="mb-0">Nouveau mot de passe</h3>
+            <small class="text-light">Sécurisez à nouveau votre compte</small>
+        </div>
+
+        <div class="card-body p-4 bg-white">
+            {{ form_start(resetForm) }}
+                <div class="mb-3">
+                    {{ form_label(resetForm.plainPassword, 'Nouveau mot de passe', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(resetForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(resetForm.plainPassword) }}
+                </div>
+
+                <button class="btn w-100 text-white" style="background-color: #198754;" type="submit">
+                    Réinitialiser le mot de passe
+                </button>
+            {{ form_end(resetForm) }}
+        </div>
+
+        <div class="card-footer text-center bg-white" style="border-radius: 0 0 1rem 1rem;">
+            <small class="text-muted">
+                Retour à la
+                <a href="{{ path('app_login') }}" class="text-success fw-semibold">connexion</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -38,7 +38,10 @@ security:
     access_control:
         # accès public aux pages de login / logout
         - { path: ^/login, roles: PUBLIC_ACCESS }
+        - { path: ^/register, roles: PUBLIC_ACCESS }
+        - { path: ^/reset-password, roles: PUBLIC_ACCESS }
         - { path: ^/logout, roles: PUBLIC_ACCESS }
+
         # tout le reste nécessite d'être connecté
         - { path: ^/, roles: ROLE_USER }
 

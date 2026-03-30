@@ -57,7 +57,7 @@
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 
-                    <a href="#" class="text-success small">Mot de passe oublié ?</a>
+                    <a href="{{ path('app_forgot_password_request') }}" class="text-success small">Mot de passe oublié ?</a>
                 </div>
 
                 <button class="btn w-100 text-white" style="background-color: #198754;" type="submit">
@@ -69,7 +69,7 @@
         <div class="card-footer text-center bg-white" style="border-radius: 0 0 1rem 1rem;">
             <small class="text-muted">
                 Nouveau sur Ecolito ?
-                <a href="#" class="text-success fw-semibold">Créer un compte</a>
+                <a href="{{ path('app_register') }}" class="text-success fw-semibold">Créer un compte</a>
             </small>
         </div>
     </div>

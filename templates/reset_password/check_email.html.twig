@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Email envoyé{% endblock %}
+
+{% block body %}
+<style>
+    .reset-page-wrapper {
+        height: 100vh;
+        overflow: hidden;
+        background: #e9f7ef;
+    }
+</style>
+
+<div class="reset-page-wrapper d-flex justify-content-center align-items-center">
+    <div class="card shadow-lg" style="max-width: 420px; width: 100%; border-radius: 1rem;">
+        <div class="card-header text-center text-white"
+             style="background-color: #198754; border-radius: 1rem 1rem 0 0;">
+            <h3 class="mb-0">Email envoyé</h3>
+            <small class="text-light">Consultez votre boîte mail</small>
+        </div>
+
+        <div class="card-body p-4 bg-white">
+            <p class="text-muted mb-3">
+                Si un compte correspondant à votre email existe, un message vient d’être envoyé avec un lien de réinitialisation.
+            </p>
+
+            <div class="alert alert-success py-2">
+                Ce lien expirera dans
+                <strong>{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}</strong>.
+            </div>
+
+            <p class="text-muted small mb-0">
+                Si vous ne recevez pas l’email, vérifiez vos spams ou
+                <a href="{{ path('app_forgot_password_request') }}" class="text-success fw-semibold">réessayez</a>.
+            </p>
+        </div>
+
+        <div class="card-footer text-center bg-white" style="border-radius: 0 0 1rem 1rem;">
+            <small class="text-muted">
+                Retour à la
+                <a href="{{ path('app_login') }}" class="text-success fw-semibold">connexion</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock %}
