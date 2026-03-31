@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
-{% block titre %}<h2> Ajouter des achats </h2>{% endblock %}
+{% block titre %}<h2> Ajouter des consommations </h2>{% endblock %}
 {% block body %}
 
 <a href="{{path('form_achats')}}" class="test">Ajouter des achats</a></br>
 <a href="{{path('form_aliments')}}" class="test">Ajouter des consommations de repas</a></br>
-<a href="{{path('form_trajets')}}" class="test">Ajouter des trajets</a>
+<a href="{{path('form_trajets')}}" class="test">Ajouter des trajets</a></br>
+<a href="{{path('form_conso_perso')}}" class="test">Ajouter des informations de consommation personnalisés</a>
 
 
 {% endblock %}

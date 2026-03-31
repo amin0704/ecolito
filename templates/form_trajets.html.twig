@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block titre %}<h2> Trajets effectués </h2>{% endblock %}
 {% block body %}
+<div class="section">
+<p> Ici, vous pouvez ajouter les trajets que vous avez effectués (en km). </br>Si vous avez pris des moyens de transport qui ne sont pas dans la liste, ou que vous souhaitez apporter des précisions aux trajets que vous avez déjà validé, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a> </p>
 
 {{ form_start(form) }}
-<div id="formu">
-        {{ form_widget(form) }}
+<div class="formu">
+        {{ form(form) }}
         </div>
 {{ form_end(form) }}
-
+</div>
 {% endblock %}

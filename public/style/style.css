@@ -7,10 +7,17 @@ h2{
     color: black;
     text-decoration: underline;
 }
-#formu{
-    margin: 10px;
+.lienCP{
+    color: black;
+    text-decoration: underline;
 }
-
+.formu{
+    margin: 10px;
+    margin-top: 15px;
+}
+.section{
+    margin: 15px;
+}
 .auth-section {
     min-height: calc(100vh - 120px);
     display: flex;
