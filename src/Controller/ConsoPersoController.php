@@ -11,6 +11,7 @@ use App\Entity\ConsoPerso;
 use App\Form\ConsoPersoType;
 use App\Repository\ConsoPersoRepository;
 
+
 final class ConsoPersoController extends AbstractController
 {
     #[Route('/conso/perso', name: 'form_conso_perso')]
@@ -18,7 +19,7 @@ final class ConsoPersoController extends AbstractController
     {
         $conso = new ConsoPerso();
         $conso->setDate(new \DateTime('now'));
-        $conso->setIdUser(1);
+        $conso->setIdUser($this->getUser()->getId());
         
 
         $form = $this->createForm(ConsoPersoType::class, $conso);
