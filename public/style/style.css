@@ -7,6 +7,124 @@ h2{
     color: black;
     text-decoration: underline;
 }
-#formu{
+.lienCP{
+    color: black;
+    text-decoration: underline;
+}
+.formu{
     margin: 10px;
+    margin-top: 15px;
+}
+.section{
+    margin: 15px;
+}
+.auth-section {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.auth-badge {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #111827;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.auth-header h1 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    color: #111827;
+}
+
+.auth-subtitle {
+    margin: 0 auto;
+    color: #6b7280;
+    max-width: 38ch;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.auth-help {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.auth-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.auth-footer-link,
+.auth-text-link,
+.auth-actions {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-footer-link a,
+.auth-text-link {
+    color: #111827;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer-link a:hover,
+.auth-text-link:hover {
+    text-decoration: underline;
+}
+
+.auth-actions-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.auth-alert {
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.auth-alert-danger {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.auth-alert-info {
+    background: #eff6ff;
+    color: #1e3a8a;
+    border: 1px solid #bfdbfe;
 }
