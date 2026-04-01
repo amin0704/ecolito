@@ -7,6 +7,13 @@ h2{
     color: black;
     text-decoration: underline;
 }
+table{
+    margin-bottom: 18px;
+}
+h4{
+    margin-top : 25px;
+}
+
 .lienCP{
     color: black;
     text-decoration: underline;

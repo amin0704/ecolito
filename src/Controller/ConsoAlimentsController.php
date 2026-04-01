@@ -34,7 +34,7 @@ final class ConsoAlimentsController extends AbstractController
         $conso->setOeufs(0);
         $conso->setPommedeterre(0);
         $conso->setDate(new \DateTime('now'));
-        $conso->setIdUser(1);
+        $conso->setIdUser($this->getUser()->getId());
         
 
         $form = $this->createForm(ConsoAlimentsType::class, $conso);

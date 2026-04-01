@@ -1,20 +1,153 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello SuiviController!{% endblock %}
-
+{% block titre %}<h2>Suivi de la consommation </h2> {% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="section">
+<h3> Statistiques clés</h3>
+<p>{{stats|raw}}</p>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<h4>Trajets (km) : </h4>
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Voiture</th>
+      <th scope="col">Train</th>
+      <th scope="col">Bus</th>
+      <th scope="col">Avion</th>
+      <th scope="col">Velo</th>
+      <th scope="col">Velo Electrique</th>
+      <th scope="col">Voiture Electrique</th>
+      <th scope="col">Moto</th>
+      <th scope="col">Bateau</th>
+      <th scope="col">Metro</th>
+      <th scope="col">Tramway</th>
+      <th scope="col">Rer</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for ligne in trajets %}
+  <tr>
+  <td>{{ligne.date}}</td>
+  <td>{{ligne.voiture}}</td>
+  <td>{{ligne.train}}</td>
+  <td>{{ligne.bus}}</td>
+  <td>{{ligne.avion}}</td>
+  <td>{{ligne.veloElectrique}}</td>
+  <td>{{ligne.veloMecanique}}</td>
+  <td>{{ligne.voitureE}}</td>
+  <td>{{ligne.moto}}</td>
+  <td>{{ligne.bateau}}</td>
+  <td>{{ligne.metro}}</td>
+  <td>{{ligne.tramway}}</td>
+  <td>{{ligne.rer}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/var/www/ecolito/src/Controller/SuiviController.php</code></li>
-        <li>Your template at <code>/var/www/ecolito/templates/suivi/index.html.twig</code></li>
-    </ul>
+<h4>Achats : </h4>
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Smartphone</th>
+      <th scope="col">Tablette</th>
+      <th scope="col">Cosmetique</th>
+      <th scope="col">Livraisons</th>
+      <th scope="col">Electromenager</th>
+      <th scope="col">Veste</th>
+      <th scope="col">Manteau</th>
+      <th scope="col">Jean</th>
+      <th scope="col">Chaussures</th>
+      <th scope="col">Livre</th>
+      <th scope="col">Journal</th>
+      <th scope="col">VeloElectrique</th>
+      <th scope="col">Velo</th>
+      <th scope="col">Television</th>
+      <th scope="col">T shirts</th>
+      <th scope="col">Pantalon</th>
+      <th scope="col">Pull</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for ligne in achats %}
+  <tr>
+  <td>{{ligne.date}}</td>
+  <td>{{ligne.smartphone}}</td>
+  <td>{{ligne.tablette}}</td>
+  <td>{{ligne.cosmetique}}</td>
+  <td>{{ligne.livraison}}</td>
+  <td>{{ligne.electromenager}}</td>
+  <td>{{ligne.veste}}</td>
+  <td>{{ligne.manteau}}</td>
+  <td>{{ligne.jean}}</td>
+  <td>{{ligne.chaussures}}</td>
+  <td>{{ligne.livre}}</td>
+  <td>{{ligne.journal}}</td>
+  <td>{{ligne.veloM}}</td>
+  <td>{{ligne.veloE}}</td>
+  <td>{{ligne.tv}}</td>
+  <td>{{ligne.tshirt}}</td>
+  <td>{{ligne.pantalon}}</td>
+  <td>{{ligne.pull}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
+<h4>Aliments : </h4>
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Poulet (kg)</th>
+      <th scope="col">Boeuf (kg)</th>
+      <th scope="col">Fromage (kg)</th>
+      <th scope="col">Pates (kg)</th>
+      <th scope="col">Riz (kg)</th>
+      <th scope="col">Oeufs (unités)</th>
+      <th scope="col">Pommes de terre (unités)</th>
+      <th scope="col">Salade (kg)</th>
+      <th scope="col">Tomates (kg)</th>
+      <th scope="col">Oignons (kg)</th>
+      <th scope="col">Pomme (unités)</th>
+      <th scope="col">Poire (unités)</th>
+      <th scope="col">Orange (unités)</th>
+      <th scope="col">Raisins (unités)</th>
+      <th scope="col">Café (litres)</th>
+      <th scope="col">Lait (litres)</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for ligne in nourriture %}
+  <tr>
+  <td>{{ligne.date}}</td>
+  <td>{{ligne.poulet}}</td>
+  <td>{{ligne.boeuf}}</td>
+  <td>{{ligne.fromage}}</td>
+  <td>{{ligne.pates}}</td>
+  <td>{{ligne.riz}}</td>
+  <td>{{ligne.oeufs}}</td>
+  <td>{{ligne.pommedeterre}}</td>
+  <td>{{ligne.salade}}</td>
+  <td>{{ligne.tomate}}</td>
+  <td>{{ligne.oignons}}</td>
+  <td>{{ligne.pomme}}</td>
+  <td>{{ligne.poire}}</td>
+  <td>{{ligne.orange}}</td>
+  <td>{{ligne.raisin}}</td>
+  <td>{{ligne.cafe}}</td>
+  <td>{{ligne.lait}}</td>
+
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
 </div>
 {% endblock %}

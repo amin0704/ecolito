@@ -11,6 +11,7 @@ use App\Repository\AchatsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
+
 final class AchatsController extends AbstractController
 {
     #[Route('/conso/achats', name: 'form_achats')]
@@ -34,7 +35,7 @@ final class AchatsController extends AbstractController
         $achats->setTablette(0);
         $achats->setTelevision(0);
         $achats->setSmartphone(0);
-        $achats->setIdUser(1);
+        $achats->setIdUser($this->getUser()->getId());
         $achats->setDate(new \DateTime('now'));
         
         

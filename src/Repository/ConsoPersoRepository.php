@@ -5,13 +5,14 @@ namespace App\Repository;
 use App\Entity\ConsoPerso;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bundle\SecurityBundle\Security;
 
 /**
  * @extends ServiceEntityRepository<ConsoPerso>
  */
 class ConsoPersoRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(ManagerRegistry $registry, private Security $security)
     {
         parent::__construct($registry, ConsoPerso::class);
     }
@@ -45,7 +46,7 @@ class ConsoPersoRepository extends ServiceEntityRepository
            return $this->createQueryBuilder('t')
                ->select('t.date AS date', 't.informations AS info') 
                ->where('t.iduser = :val')
-               ->setParameter('val', 1)
+               ->setParameter('val', $this->security->getUser()->getId())
                ->getQuery()
                ->getScalarResult()
            ;

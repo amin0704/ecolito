@@ -11,6 +11,7 @@ use App\Repository\TrajetsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
+
 final class TrajetsController extends AbstractController
 {
     #[Route('/conso/trajets', name: 'form_trajets')]
@@ -29,7 +30,7 @@ final class TrajetsController extends AbstractController
         $trajets->setMoto(0);
         $trajets->setBus(0);
         $trajets->setVoitureElectrique(0);
-        $trajets->setIdUser(1);
+        $trajets->setIdUser($this->getUser()->getId());
         $trajets->setDate(new \DateTime('now'));
         
         
