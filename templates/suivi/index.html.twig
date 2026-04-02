@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SuiviController!{% endblock %}
-{% block titre %}<h2>Suivi de la consommation </h2> {% endblock %}
+{% block title %}Bilan Statistique!{% endblock %}
+{% block titre %}<h2>Bilan Statistique </h2> {% endblock %}
 {% block body %}
 <div class="section centrage">
 <h3> Statistiques clés</h3>
@@ -24,6 +24,7 @@
       <th scope="col">Metro</th>
       <th scope="col">Tramway</th>
       <th scope="col">Rer</th>
+      <th scope="col">Precisions</th>
     </tr>
   </thead>
   <tbody>
@@ -42,6 +43,11 @@
   <td>{{ligne.metro}}</td>
   <td>{{ligne.tramway}}</td>
   <td>{{ligne.rer}}</td>
+  {% if ligne.infos is not null %}
+    <td>{{ligne.infos}}</td>
+  {% else %}
+    <td></td>
+  {% endif %}
   </tr>
   {% endfor %}
   </tbody>
@@ -69,6 +75,7 @@
       <th scope="col">T shirts</th>
       <th scope="col">Pantalon</th>
       <th scope="col">Pull</th>
+      <th scope="col">Precisions</th>
     </tr>
   </thead>
   <tbody>
@@ -92,6 +99,11 @@
   <td>{{ligne.tshirt}}</td>
   <td>{{ligne.pantalon}}</td>
   <td>{{ligne.pull}}</td>
+  {% if ligne.infos is not null %}
+    <td>{{ligne.infos}}</td>
+  {% else %}
+    <td></td>
+  {% endif %}
   </tr>
   {% endfor %}
   </tbody>
@@ -106,6 +118,7 @@
       <th scope="col">Date</th>
       <th scope="col">Poulet (kg)</th>
       <th scope="col">Boeuf (kg)</th>
+      <th scope="col">Poisson (kg)</th>
       <th scope="col">Fromage (kg)</th>
       <th scope="col">Pates (kg)</th>
       <th scope="col">Riz (kg)</th>
@@ -120,6 +133,7 @@
       <th scope="col">Raisins (unités)</th>
       <th scope="col">Café (litres)</th>
       <th scope="col">Lait (litres)</th>
+      <th scope="col">Precisions</th>
     </tr>
   </thead>
   <tbody>
@@ -128,6 +142,7 @@
   <td>{{ligne.date}}</td>
   <td>{{ligne.poulet}}</td>
   <td>{{ligne.boeuf}}</td>
+  <td>{{ligne.poisson}}</td>
   <td>{{ligne.fromage}}</td>
   <td>{{ligne.pates}}</td>
   <td>{{ligne.riz}}</td>
@@ -142,11 +157,40 @@
   <td>{{ligne.raisin}}</td>
   <td>{{ligne.cafe}}</td>
   <td>{{ligne.lait}}</td>
-
+  {% if ligne.infos is not null %}
+    <td>{{ligne.infos}}</td>
+  {% else %}
+    <td></td>
+  {% endif %}
   </tr>
   {% endfor %}
   </tbody>
 </table>
+
+
+
+
+<h4>Informations personalisées : </h4>
+   <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Informations</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for ligne in infos %}
+  <tr>
+  <td>{{ligne.date}}</td>
+  <td>{{ligne.info}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
+
 
 
 </div>

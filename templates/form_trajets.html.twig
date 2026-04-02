@@ -2,12 +2,67 @@
 {% block titre %}<h2> Trajets effectués </h2>{% endblock %}
 {% block body %}
 <div class="section">
-<p> Ici, vous pouvez ajouter les trajets que vous avez effectués (en km). </br>Si vous avez pris des moyens de transport qui ne sont pas dans la liste, ou que vous souhaitez apporter des précisions aux trajets que vous avez déjà validé, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a> </p>
+<p class="pres_form"> - Ici, vous pouvez ajouter les trajets que vous avez effectués. </br>
+ - Laissez les champs non-concernés à 0.</br>
+ - Si vous avez fait des trajets avec des moyens de transport qui ne sont pas dans la liste, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a></br>
+ - Pour toutes précisions ou informations supplementaires sur vos trajets, remplissez le dernier champ du formulaire avec les informations que vous souhaitez</p></br>
 
 {{ form_start(form) }}
 <div class="formu">
-        {{ form(form) }}
-        </div>
+        <div class="form-group">
+    <label>Km parcourus en Voiture</label>
+    {{form_widget(form.voiture)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Voiture Electrique</label>
+    {{form_widget(form.voitureElectrique)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Train</label>
+    {{form_widget(form.train)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Bus </label>
+    {{form_widget(form.bus)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Avion </label>
+    {{form_widget(form.avion)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Velo </label>
+    {{form_widget(form.veloMecanique)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Velo Electrique </label>
+    {{form_widget(form.veloElectrique)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Moto </label>
+    {{form_widget(form.moto)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Bateau </label>
+    {{form_widget(form.bateau)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Metro </label>
+    {{form_widget(form.metro)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Tramway </label>
+    {{form_widget(form.tramway)}}
+  </div>
+  <div class="form-group">
+    <label>Km parcourus en Rer </label>
+    {{form_widget(form.rer)}}
+  </div>
+  <div class="form-group">
+    <label>Précisions supplementaires (par exemple : Certains trajets sont ils quotidien ? Ou ponctuels ? Vous ne conaissez pas la distance mais le temps de trajet ? Precision sur le modele ? Ou n'importe quelles autres informations utiles)</label>
+    {{form_widget(form.infos)}}
+  </div>
+
+  {{ form_widget(form.submit) }}
 {{ form_end(form) }}
 </div>
 {% endblock %}

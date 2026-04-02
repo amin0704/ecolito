@@ -25,9 +25,7 @@ class TrajetsType extends AbstractType
             ->add('metro')
             ->add('tramway')
             ->add('rer')
-            ->add('date', null, [
-                'widget' => 'single_text',
-            ])
+            ->add('infos')
             ->add('submit', SubmitType::class, ['label' => 'Valider']);
             
         ;

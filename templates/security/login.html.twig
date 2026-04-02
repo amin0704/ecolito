@@ -8,8 +8,18 @@
     /* Spécifique à la page de connexion */
     .login-page-wrapper {
         height: 100vh;
-        overflow: hidden;              /* empêche le scroll */
-        background: #e9f7ef;           /* vert clair */
+        overflow: hidden;
+        background: #e9f7ef;
+    }
+
+    .login-page-wrapper .form-control {
+        border: 2px solid #bfc8c2;
+    }
+
+    .login-page-wrapper .form-control:focus {
+        border-color: #198754;
+        box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.15);
+        outline: none;
     }
 </style>
 

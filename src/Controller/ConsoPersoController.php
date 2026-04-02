@@ -29,7 +29,7 @@ final class ConsoPersoController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($conso);
         $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('consommation');
+        return $this->redirectToRoute('suivi');
     }
 
     return $this->render('conso_perso/index.html.twig', [

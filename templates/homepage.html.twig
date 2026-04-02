@@ -18,12 +18,13 @@
                 </p>
 
                 <div class="hero-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="{{ path('consommation') }}" class="btn btn-outline-success btn-lg">
+                        Saisir vos données de consommation
+                    </a>
                     <a href="{{ path('suivi') }}" class="btn btn-success btn-lg">
-                        Mon suivi
+                        Votre bilan statistique
                     </a>
-                    <a href="{{ path('consommation') }}" class="btn btn-outline-success btn-lg">
-                        Ajouter une consommation
-                    </a>
+                    
                 </div>
 
                 <p class="hero-note mb-0">
@@ -72,7 +73,7 @@
                             <i class="bi bi-check2-circle"></i>
                             <div>
                                 <h5 class="fw-bold mb-1">Consultez vos données au même endroit</h5>
-                                <p class="text-muted mb-0">Retrouvez votre suivi dans une interface claire et structurée.</p>
+                                <p class="text-muted mb-0">Retrouvez votre bilan dans une interface claire et structurée.</p>
                             </div>
                         </div>
 
@@ -106,7 +107,7 @@
                     <div class="icon-soft">
                         <i class="bi bi-graph-up"></i>
                     </div>
-                    <h3 class="h4 fw-bold">Mon suivi</h3>
+                    <h3 class="h4 fw-bold">Votre bilan</h3>
                     <p class="text-muted mb-0">
                         Visualisez vos habitudes et identifiez rapidement les points les plus importants dans votre quotidien.
                     </p>
@@ -136,14 +137,14 @@
                     <div class="icon-soft">
                         <i class="bi bi-plus-circle"></i>
                     </div>
-                    <h3 class="h4 fw-bold">Ajouter une consommation</h3>
+                    <h3 class="h4 fw-bold">Saisir vos données de consommation</h3>
                     <p class="text-muted mb-0">
                         Enregistrez facilement vos trajets, vos repas et vos achats depuis un espace pensé pour aller vite.
                     </p>
                     <div class="d-grid gap-2 mt-4">
-                        <a href="{{ path('form_trajets') }}" class="btn btn-outline-success">Ajouter un trajet</a>
-                        <a href="{{ path('form_aliments') }}" class="btn btn-outline-success">Ajouter un repas</a>
-                        <a href="{{ path('form_achats') }}" class="btn btn-outline-success">Ajouter un achat</a>
+                        <a href="{{ path('form_trajets') }}" class="btn btn-outline-success">Saisir vos trajets</a>
+                        <a href="{{ path('form_aliments') }}" class="btn btn-outline-success">Saisir vos repas</a>
+                        <a href="{{ path('form_achats') }}" class="btn btn-outline-success">Saisir vos achats</a>
                         <a href="{{ path('form_conso_perso') }}" class="btn btn-outline-success">Ajout personnalisé</a>
 
                     </div>
@@ -162,10 +163,10 @@
             </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
                 <a href="{{ path('suivi') }}" class="btn btn-light btn-lg text-success fw-semibold px-4">
-                    Mon suivi
+                    Votre bilan
                 </a>
                 <a href="{{ path('app_account') }}" class="btn btn-outline-light btn-lg px-4">
-                    Mon compte
+                    Votre compte
                 </a>
             </div>
         </div>

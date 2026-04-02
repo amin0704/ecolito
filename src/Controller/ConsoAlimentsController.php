@@ -32,6 +32,7 @@ final class ConsoAlimentsController extends AbstractController
         $conso->setPates(0);
         $conso->setRiz(0);
         $conso->setOeufs(0);
+        $conso->setPoisson(0);
         $conso->setPommedeterre(0);
         $conso->setDate(new \DateTime('now'));
         $conso->setIdUser($this->getUser()->getId());
@@ -44,7 +45,7 @@ final class ConsoAlimentsController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($conso);
         $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('consommation');
+        return $this->redirectToRoute('suivi');
     }
 
     return $this->render('consoaliments.html.twig', [

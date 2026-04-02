@@ -42,7 +42,7 @@ final class TrajetsController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
         $em->persist($trajets);
         $em->flush(); // ← INSERT en BDD
-        return $this->redirectToRoute('consommation');
+        return $this->redirectToRoute('suivi');
     }
 
     return $this->render('form_trajets.html.twig', [

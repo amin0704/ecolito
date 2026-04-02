@@ -15,9 +15,6 @@ class ConsoPersoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date', null, [
-                'widget' => 'single_text',
-            ])
             ->add('informations', TextareaType::class)
             ->add('submit', SubmitType::class, ['label' => 'Valider']);
             ;

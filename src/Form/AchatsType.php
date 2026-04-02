@@ -30,9 +30,7 @@ class AchatsType extends AbstractType
             ->add('pull')
             ->add('livre')
             ->add('journal')
-            ->add('date', null, [
-                'widget' => 'single_text',
-            ])
+            ->add('infos')
             ->add('submit', SubmitType::class, ['label' => 'Valider']);
         ;
     }
