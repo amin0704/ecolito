@@ -32,12 +32,21 @@ final class SuiviController extends AbstractController
         $message = '';
         foreach($traj as $r){
             $message = $message." A la date ".$r['date']." , j'ai parcouru ".$r['voiture']." km en voiture, ".$r['moto']." km en moto, ".$r['bus']." km en bus, ".$r['tramway']." km en tramway, ".$r['avion']." km en avion, ".$r['bateau']." km en bateau, ".$r['veloElectrique']." km en velo electrique, ".$r['veloMecanique']." km en velo mecanique, ".$r['train']." km en train, ".$r['metro']." km en metro, ".$r['rer']." km en rer. \n";
-        }
+            if(isset($r['infos'])){
+                $message = $message."Concernant cette ligne : voici les infos supprlementaires : ".$r['infos']." \n";
+            } 
+            }
         foreach($ach as $r){
             $message = $message." A la date ".$r['date']." , j'ai acheté ".$r['smartphone']." smartphone, ".$r['tablette']." tablette, ".$r['cosmetique']." produits cosmetiques, je me suis fais livré ".$r['livraison']." produits, j'ai acheté ".$r['electromenager']." produits electromenager, ".$r['veste']." veste, ".$r['manteau']." manteau, ".$r['jean']." jean, ".$r['chaussures']." chaussures, ".$r['livre']." livre, ".$r['journal']." journal, ".$r['veloE']." velo electrique, ".$r['veloM']." velo mecanique, ".$r['tv']." television, ".$r['tshirt']." tshirt, ".$r['pantalon']." pantalon, ".$r['pull']." pull. \n ";
-        }
+            if(isset($r['infos'])){
+                $message = $message."Concernant cette ligne : voici les infos supprlementaires : ".$r['infos']." \n";
+            } 
+            }
         foreach($alim as $r){
             $message = $message." A la date ".$r['date']." , j'ai mangé ".$r['poulet']." kg de poulet, ".$r['poisson']." kg de poisson, ".$r['boeuf']." kg de boeuf, ".$r['fromage']." kg de fromage, ".$r['pates']." kg de pates,  ".$r['riz']." kg de riz, ".$r['oeufs']." oeufs, ".$r['pommedeterre']." kg de pomme de terre, ".$r['salade']." kg de salade, ".$r['tomate']." kg de tomate, ".$r['oignons']." kg d'oignons , ".$r['pomme']." pomme, ".$r['poire']." poire, ".$r['orange']." orange, ".$r['raisin']." raisin, ".$r['cafe']." L de cafe, ".$r['lait']." L de lait, \n ";
+            if(isset($r['infos'])){
+                $message = $message."Concernant cette ligne : voici les infos supprlementaires : ".$r['infos']." \n";
+            } 
         }
          foreach($info as $r){
              $message = $message." Informations supplementaires : ".$r['info'].". (Cette info a été saisies à la date ".$r['date'].", pour cette info prend en compte la date que si c'est utile sinon pas la peine ) \n";
