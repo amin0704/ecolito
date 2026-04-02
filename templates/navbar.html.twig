@@ -13,24 +13,23 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Suivi</a>
+          <a class="nav-link text-light" href="{{ path('suivi') }}">Suivi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="{{path('suggestions')}}">Suggestions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('consommation') }}">Ma Consommation</a>
+          <a class="nav-link text-light" href="{{ path('consommation') }}">Ajouter une Consommation</a>
         </li>
       </ul>
 
       {# Zone droite : mon compte + déconnexion #}
       {% if app.user and is_granted('ROLE_USER') %}
 
-         <a class="nav-link text-light me-3" href="{{ path('app_account') }}">
-        Compte {{ app.user.prenom }}
-         </a>
-        <span class="navbar-text text-light me-3">
-           
+<a class="nav-link text-light me-3" href="{{ path('app_account') }}" title="Mon compte">
+    <i class="bi bi-person-circle fs-4"></i>
+</a>
+<span class="navbar-text text-light me-3">
         </span>
         <a class="btn btn-outline-light" href="{{ path('app_logout') }}">
           Déconnexion
