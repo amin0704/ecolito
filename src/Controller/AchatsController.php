@@ -48,7 +48,7 @@ final class AchatsController extends AbstractController
         $em->persist($achats);
         $em->flush();
         $this->addFlash('success', 'Données entrées avec succès !');
-        return $this->redirectToRoute('consommation');
+        return $this->redirectToRoute('suivi');
     }
 
     return $this->render('form_achats.html.twig', [

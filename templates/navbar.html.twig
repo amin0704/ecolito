@@ -12,15 +12,16 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('suivi') }}">Suivi</a>
+      <li class="nav-item">
+          <a class="nav-link text-light" href="{{ path('consommation') }}">Saisir vos données de consommation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{path('suggestions')}}">Suggestions</a>
+          <a class="nav-link text-light" href="{{ path('suivi') }}">Votre bilan statistique</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('consommation') }}">Ajouter une Consommation</a>
+          <a class="nav-link text-light" href="{{path('suggestions')}}">Conseils personalisés</a>
         </li>
+        
       </ul>
 
       {# Zone droite : mon compte + déconnexion #}

@@ -71,6 +71,9 @@ class Achats
     #[ORM\Column]
     private ?int $iduser = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $infos = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -309,6 +312,18 @@ class Achats
     public function setIduser(int $iduser): static
     {
         $this->iduser = $iduser;
+
+        return $this;
+    }
+
+    public function getInfos(): ?string
+    {
+        return $this->infos;
+    }
+
+    public function setInfos(?string $infos): static
+    {
+        $this->infos = $infos;
 
         return $this;
     }

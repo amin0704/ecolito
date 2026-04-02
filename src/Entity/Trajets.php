@@ -56,6 +56,9 @@ class Trajets
     #[ORM\Column]
     private ?int $idUser = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $infos = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -225,6 +228,18 @@ class Trajets
     public function setIdUser(int $idUser): static
     {
         $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    public function getInfos(): ?string
+    {
+        return $this->infos;
+    }
+
+    public function setInfos(?string $infos): static
+    {
+        $this->infos = $infos;
 
         return $this;
     }

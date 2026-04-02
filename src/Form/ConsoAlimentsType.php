@@ -15,6 +15,7 @@ class ConsoAlimentsType extends AbstractType
         $builder
             ->add('poulet')
             ->add('boeuf')
+            ->add('poisson')
             ->add('fromage')
             ->add('pates')
             ->add('riz')
@@ -29,9 +30,7 @@ class ConsoAlimentsType extends AbstractType
             ->add('raisin')
             ->add('cafe')
             ->add('lait')
-            ->add('date', null, [
-                'widget' => 'single_text',
-            ])
+            ->add('infos')
             ->add('submit', SubmitType::class, ['label' => 'Valider']);
         ;
     }

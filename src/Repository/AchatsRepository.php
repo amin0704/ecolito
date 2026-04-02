@@ -45,7 +45,7 @@ class AchatsRepository extends ServiceEntityRepository
     public function getAllAchats(): array
        {
            return $this->createQueryBuilder('t')
-               ->select('t.smartphone AS smartphone', 't.tablette AS tablette', 't.cosmetique AS cosmetique', 't.achatEnLivraison AS livraison', 't.electromenager AS electromenager', 't.veste AS veste', 't.manteau AS manteau', 't.jean AS jean', 't.chaussures AS chaussures', 't.livre AS livre', 't.journal AS journal', 't.veloElectrique AS veloE', 't.veloMecanique AS veloM', 't.television AS tv', 't.tshirt AS tshirt', 't.pantalon AS pantalon', 't.pull AS pull', 't.date AS date' ) 
+               ->select('t.smartphone AS smartphone', 't.tablette AS tablette', 't.cosmetique AS cosmetique', 't.achatEnLivraison AS livraison', 't.electromenager AS electromenager', 't.veste AS veste', 't.manteau AS manteau', 't.jean AS jean', 't.chaussures AS chaussures', 't.livre AS livre', 't.journal AS journal', 't.veloElectrique AS veloE', 't.veloMecanique AS veloM', 't.television AS tv', 't.tshirt AS tshirt', 't.pantalon AS pantalon', 't.pull AS pull', 't.infos AS infos', 't.date AS date' ) 
                ->where('t.iduser = :val')
                ->setParameter('val', $this->security->getUser()->getId())
                ->getQuery()

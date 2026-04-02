@@ -68,6 +68,12 @@ class ConsoAliments
     #[ORM\Column]
     private ?int $idUser = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $infos = null;
+
+    #[ORM\Column]
+    private ?float $poisson = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -289,5 +295,29 @@ class ConsoAliments
     public function getIdUser(): ?int
     {
         return $this->idUser;
+    }
+
+    public function getInfos(): ?string
+    {
+        return $this->infos;
+    }
+
+    public function setInfos(?string $infos): static
+    {
+        $this->infos = $infos;
+
+        return $this;
+    }
+
+    public function getPoisson(): ?float
+    {
+        return $this->poisson;
+    }
+
+    public function setPoisson(float $poisson): static
+    {
+        $this->poisson = $poisson;
+
+        return $this;
     }
 }

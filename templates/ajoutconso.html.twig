@@ -2,10 +2,13 @@
 {% block titre %}<h2> Ajouter des consommations </h2>{% endblock %}
 {% block body %}
 
-<a href="{{path('form_achats')}}" class="test">Ajouter des achats</a></br>
-<a href="{{path('form_aliments')}}" class="test">Ajouter des consommations de repas</a></br>
-<a href="{{path('form_trajets')}}" class="test">Ajouter des trajets</a></br>
-<a href="{{path('form_conso_perso')}}" class="test">Ajouter des informations de consommation personnalisés</a>
+<ul class="list-group">
+    <li class="list-group-item"><a href="{{path('form_achats')}}" class="test">-> Saisir vos achats</a></li>
+  <li class="list-group-item"><a href="{{path('form_aliments')}}" class="test">-> Saisir vos consommations de repas</a></li>
+  <li class="list-group-item"><a href="{{path('form_trajets')}}" class="test">-> Saisir vos trajets</a></li>
+  <li class="list-group-item"><a href="{{path('form_conso_perso')}}" class="test">-> Saisir vos informations de consommation personnalisées</a></li>
+</ul>
+
 
 
 {% endblock %}

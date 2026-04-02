@@ -2,12 +2,86 @@
 {% block titre %} <h2>Consommation d'aliments</h2> {% endblock %}
 {% block body %}
 <div class="section">
-<p> Ici, vous pouvez ajouter les aliments que vous avez consommés (fruits et oeufs en nombre d'unités consommés, boissons en litres consommés et le reste en kg consommés). </br>Si vous avez consommé des aliments qui ne sont pas dans la liste, ou que vous souhaitez apporter des précisions aux consommations que vous avez déjà validé, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a> </p>
+<p class="pres_form"> - Ici, vous pouvez ajouter les aliments que vous avez consommés. </br>
+ - Laissez les champs non-concernés à 0.</br>
+ - Si vous avez consommé des aliments qui ne sont pas dans la liste, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a></br>
+ - Pour toutes précisions ou informations supplementaires sur vos consommations d'aliments, remplissez le dernier champ du formulaire avec les informations que vous souhaitez</p></br>
 
 {{ form_start(form) }}
 <div class="formu">
-        {{ form(form) }}
-        </div>
+        <div class="form-group">
+    <label>Kilos de poulet consommés</label>
+    {{form_widget(form.poulet)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de boeuf consommés</label>
+    {{form_widget(form.boeuf)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de poisson consommés</label>
+    {{form_widget(form.poisson)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de fromage consommés</label>
+    {{form_widget(form.fromage)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de pates consommés</label>
+    {{form_widget(form.pates)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de riz consommés</label>
+    {{form_widget(form.riz)}}
+  </div>
+  <div class="form-group">
+    <label>Nombre d'oeufs consommés</label>
+    {{form_widget(form.oeufs)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de pomme de terre consommés</label>
+    {{form_widget(form.pommedeterre)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de salade consommés(kg)</label>
+    {{form_widget(form.salade)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos de tomate consommés(kg)</label>
+    {{form_widget(form.tomate)}}
+  </div>
+  <div class="form-group">
+    <label>Kilos d'oignons consommés(kg)</label>
+    {{form_widget(form.oignons)}}
+  </div>
+  <div class="form-group">
+    <label>Nombre de pommes consommés</label>
+    {{form_widget(form.pomme)}}
+  </div>
+  <div class="form-group">
+    <label>Nombre de poires consommés</label>
+    {{form_widget(form.poire)}}
+  </div>
+  <div class="form-group">
+    <label>Nombre d'oranges consommés</label>
+    {{form_widget(form.orange)}}
+  </div>
+  <div class="form-group">
+    <label>Nombre de raisins consommés</label>
+    {{form_widget(form.raisin)}}
+  </div>
+  <div class="form-group">
+    <label>Litres de café consommés</label>
+    {{form_widget(form.cafe)}}
+  </div>
+   <div class="form-group">
+    <label>Litres de lait consommés</label>
+    {{form_widget(form.lait)}}
+  </div>
+  <div class="form-group">
+    <label>Précisions supplementaires (exemple : Quelles consommations sont frequentes ? Ponctuelles ? Origine des aliments ? ou n'importe quelles informations utiles)</label>
+    {{form_widget(form.infos)}}
+  </div>
+  {{ form_widget(form.submit) }}
 {{ form_end(form) }}
 </div>
 {% endblock %}

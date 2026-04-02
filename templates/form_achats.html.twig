@@ -2,12 +2,86 @@
 {% block titre %} <h2>Achats effectués </h2>{% endblock %}
 {% block body %}
 <div class="section">
-<p> Ici,vous pouvez ajouter les achats que vous avez effectués. </br>Si vous avez fait des achats qui ne sont pas dans la liste, ou que vous souhaitez apporter des précisions à ceux que vous avez validez, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a> </p>
+<p class="pres_form"> - Ici, vous pouvez ajouter les achats que vous avez effectués. </br>
+ - Laissez les champs non-concernés à 0.</br>
+ - Si vous avez fait des achats qui ne sont pas dans la liste, n'hésitez pas à consulter le <a href="{{path('form_conso_perso')}}" class="lienCP">formulaire personalisé</a></br>
+ - Pour toutes précisions ou informations supplementaires sur vos achats, remplissez le dernier champ du formulaire avec les informations que vous souhaitez</p></br>
 
 {{ form_start(form) }}
 <div class="formu">
-        {{ form(form) }}
-   </div>     
+        <div class="form-group">
+    <label>Smartphone</label>
+    {{form_widget(form.smartphone)}}
+  </div>
+  <div class="form-group">
+    <label>Tablette</label>
+    {{form_widget(form.tablette)}}
+  </div>
+  <div class="form-group">
+    <label>Television</label>
+    {{form_widget(form.television)}}
+  </div>
+  <div class="form-group">
+    <label>Electromenager</label>
+    {{form_widget(form.electromenager)}}
+  </div>
+  <div class="form-group">
+    <label>Velo</label>
+    {{form_widget(form.veloMecanique)}}
+  </div>
+  <div class="form-group">
+    <label>Velo Electrique</label>
+    {{form_widget(form.veloElectrique)}}
+  </div>
+  <div class="form-group">
+    <label>Produits livrés</label>
+    {{form_widget(form.achatEnLivraison)}}
+  </div>
+  <div class="form-group">
+    <label>Produits cosmetiques</label>
+    {{form_widget(form.cosmetique)}}
+  </div>
+  <div class="form-group">
+    <label>T-shirts</label>
+    {{form_widget(form.tshirt)}}
+  </div>
+  <div class="form-group">
+    <label>Chaussures</label>
+    {{form_widget(form.chaussures)}}
+  </div>
+  <div class="form-group">
+    <label>Jean</label>
+    {{form_widget(form.jean)}}
+  </div>
+  <div class="form-group">
+    <label>Manteau</label>
+    {{form_widget(form.manteau)}}
+  </div>
+  <div class="form-group">
+    <label>Veste</label>
+    {{form_widget(form.veste)}}
+  </div>
+  <div class="form-group">
+    <label>Pantalon</label>
+    {{form_widget(form.pantalon)}}
+  </div>
+  <div class="form-group">
+    <label>Pull</label>
+    {{form_widget(form.pull)}}
+  </div>
+   <div class="form-group">
+    <label>Livre</label>
+    {{form_widget(form.livre)}}
+  </div>
+  <div class="form-group">
+    <label>Journal</label>
+    {{form_widget(form.journal)}}
+  </div>
+  <div class="form-group">
+    <label>Précisions supplementaires (exemple : Précision sur le type de produits achetés, quels produits ont été livrés, quels achats sont recurrents, ou n'importe quelles informations utiles)</label>
+    {{form_widget(form.infos)}}
+  </div>
+  {{ form_widget(form.submit) }}
 {{ form_end(form) }}
 </div>
 {% endblock %}
