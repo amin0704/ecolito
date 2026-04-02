@@ -3,29 +3,210 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-<section
-    class="text-white text-center d-flex align-items-center"
-    class="homepage position-relative overflow-hidden"
-    style="height: 90vh;
-           background: linear-gradient(rgba(57, 132, 57, 0.39), rgba(0,100,0,0.4)), 
-                       url('{{ asset('assets/images/bg.jpg') }}');
-           background-size: cover;
-           background-position: center;">
+<section class="homepage-hero">
     <div class="container">
-        <h1 class="display-1 fw-bold mb-4">
-            Protégeons Notre Planète
-        </h1>
+        <div class="row justify-content-center text-center">
+            <div class="col-xl-9 col-lg-10">
+                <span class="homepage-badge mb-4">Bienvenue sur Ecolito</span>
 
-        <p class="lead fs-1 mb-5">
-            Un geste aujourd'hui pour un monde vert demain
-        </p>
+                <h1 class="hero-title fw-bold mb-4">
+                    Réduisez votre impact quotidien simplement
+                </h1>
 
-        <p  class="text-light fs-4 mb-3">
-            Agir Maintenant
-        </p>
-        <i class="bi bi-chevron-down display-6 text-light" href="#"></i>
-        
+                <p class="hero-text mb-4">
+                    Centralisez vos consommations, ajoutez vos trajets, repas et achats, puis découvrez des suggestions utiles pour adopter de meilleures habitudes.
+                </p>
+
+                <div class="hero-actions d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="{{ path('consommation') }}" class="btn btn-success btn-lg">
+                        Voir ma consommation
+                    </a>
+                    <a href="{{ path('form_trajets') }}" class="btn btn-outline-success btn-lg">
+                        Ajouter une consommation
+                    </a>
+                </div>
+
+                <p class="hero-note mb-0">
+                    Une plateforme claire, pensée pour suivre, comprendre et agir.
+                </p>
+
+
+
+                <div class="mt-4">
+                    <a href="#mission" class="scroll-indicator">
+                        <p class="mb-2 fs-5">Découvrir la plateforme</p>
+                        <i class="bi bi-chevron-down fs-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
+<section id="mission" class="py-5 section-soft">
+    <div class="container py-4">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <span class="text-success fw-semibold text-uppercase small">Votre espace</span>
+                <h2 class="display-6 fw-bold mt-2 mb-3 text-start">Pilotez votre impact sans complexité</h2>
+                <p class="text-muted fs-5 mb-3 text-start">
+                    Ecolito réunit dans un seul espace les éléments utiles pour suivre vos habitudes de consommation et avancer étape par étape.
+                </p>
+                <p class="text-muted mb-0 text-start">
+                    Vous gagnez une meilleure vue d’ensemble sur votre quotidien, sans interface compliquée ni informations inutiles.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="mission-box">
+                    <div class="mission-list">
+                        <div class="mission-item">
+                            <i class="bi bi-check2-circle"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Ajoutez facilement vos consommations</h5>
+                                <p class="text-muted mb-0">Enregistrez vos trajets, vos repas et vos achats en quelques clics.</p>
+                            </div>
+                        </div>
+
+                        <div class="mission-item">
+                            <i class="bi bi-check2-circle"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Consultez vos données au même endroit</h5>
+                                <p class="text-muted mb-0">Retrouvez votre suivi dans une interface claire et structurée.</p>
+                            </div>
+                        </div>
+
+                        <div class="mission-item">
+                            <i class="bi bi-check2-circle"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Recevez des pistes d’amélioration</h5>
+                                <p class="text-muted mb-0">Profitez de suggestions utiles pour consommer de manière plus responsable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="section-title text-center">
+            <span class="text-success fw-semibold text-uppercase small">Fonctionnalités</span>
+            <h2 class="display-6 fw-bold mt-2">Tout ce qu’il faut pour mieux consommer</h2>
+            <p class="mb-0">
+                Chaque section a un rôle précis pour vous aider à suivre vos habitudes et agir plus facilement au quotidien.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="homepage-card">
+                    <div class="icon-soft">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Ma consommation</h3>
+                    <p class="text-muted mb-0">
+                        Visualisez vos habitudes et identifiez rapidement les postes les plus importants dans votre quotidien.
+                    </p>
+                    <a href="{{ path('consommation') }}" class="btn btn-outline-success mt-4">
+                        Accéder
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="homepage-card">
+                    <div class="icon-soft">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Suggestions personnalisées</h3>
+                    <p class="text-muted mb-0">
+                        Recevez des pistes concrètes pour consommer moins, mieux organiser vos choix et progresser dans le temps.
+                    </p>
+                    <a href="{{ path('suggestions') }}" class="btn btn-outline-success mt-4">
+                        Voir les suggestions
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="homepage-card">
+                    <div class="icon-soft">
+                        <i class="bi bi-plus-circle"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Ajouter une consommation</h3>
+                    <p class="text-muted mb-0">
+                        Enregistrez facilement vos trajets, vos repas et vos achats depuis un espace pensé pour aller vite.
+                    </p>
+                    <div class="d-grid gap-2 mt-4">
+                        <a href="{{ path('form_trajets') }}" class="btn btn-outline-success">Ajouter un trajet</a>
+                        <a href="{{ path('form_aliments') }}" class="btn btn-outline-success">Ajouter un repas</a>
+                        <a href="{{ path('form_achats') }}" class="btn btn-outline-success">Ajouter un achat</a>
+                        <a href="{{ path('form_achats') }}" class="btn btn-outline-success">Ajout personnalisé</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 section-soft">
+    <div class="container py-4">
+        <div class="cta-box text-white p-5 text-center">
+            <h2 class="display-6 fw-bold mb-3">Commencez votre suivi dès maintenant</h2>
+            <p class="fs-5 mb-4">
+                Accédez à vos données, ajoutez vos consommations et consultez votre espace personnel.
+            </p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <a href="{{ path('consommation') }}" class="btn btn-light btn-lg text-success fw-semibold px-4">
+                    Ma consommation
+                </a>
+                <a href="{{ path('app_account') }}" class="btn btn-outline-light btn-lg px-4">
+                    Mon compte
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="section-title text-center">
+            <span class="text-success fw-semibold text-uppercase small">Nous contacter</span>
+            <h2 class="display-6 fw-bold mt-2">Une question ?</h2>
+            <p class="mb-0">
+                L’équipe Ecolito reste disponible pour vous répondre simplement.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5 col-lg-4">
+                <div class="homepage-card text-center">
+                    <div class="icon-soft mx-auto">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3 mb-2">Email</h5>
+                    <a href="mailto:contact@ecolito.fr" class="contact-link fs-5 d-block">
+                        contact@ecolito.fr
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-lg-4">
+                <div class="homepage-card text-center">
+                    <div class="icon-soft mx-auto">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <h5 class="fw-bold mt-3 mb-2">Adresse</h5>
+                    <a href="https://maps.google.com/?q=123+Rue+Verte+Paris" target="_blank" class="contact-link fs-5 d-block">
+                        12 Pl. du Panthéon<br> 75005 Paris
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
