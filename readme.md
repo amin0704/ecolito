@@ -2,8 +2,9 @@
 ## Projet Ecolito L3 Miage Classique Paris 1
 Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Panthéon-Sorbonne 2025-26
 
-### IMPORTANT
-Avant toute utilisation du site, il est necessaire de modifier le .env en enlevant les espaces sur les lignes lié au mailer, à la base de donnée et a la clé API. Chacune de ses lignes a un espace, il faut absolument l'enlever pour que le site fonctionne. 
+### IMPORTANT !
+Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API sur le .env 
+
 
 ### Utilisation
 Vous devez avoir un compte pour acceder au site. Vous pouvez utiliser la page inscription, ou utiliser un compte avec des données deja existantes. Exemple de compte deja existant avec des données : mail : a@gmail.com / mot de passe : aaaaaa (c'est un compte test)
