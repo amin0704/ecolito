@@ -52,28 +52,28 @@ final class SuggestionsController extends AbstractController
              
              }
 
-        $message = $message.". Evalue ma consommation directement (ne considere pas que tu es dans une conversation classique, tu dois juste fournir les infos d'une maniere structuree et lisible, et ne parle pas de prompt ou quoi tu fourni juste un service integré pour l'utilisateur), ai-je un bon impact ou non à l'environnement ? Avec mes points forts et mes points faibles. Donne des conseils pertinents pour m'améliorer. Met en valeur dans l'affichage mes points négatifs. Si tu n'as aucune donnée dans ce prompt, invite l'utilisateur à aller dans la rubrique 'saisir vos données de consommation' dans la barre du haut et a rentrer régulièrement ses données de consommation (nourriture, trajets, achats, consommation personnalisée). Dans cette rubrique, il peut rentrer chaque trajet qu'il a fait (km et mode de transport), chaque aliment qu'il, a consommé (en kg), chaque achats qu'il a fait et une section personnalisé ou il rentre les donnees qu'il veut";
-        $rep = $client->request('POST', "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=".$_ENV['MA_CLE_API'], [
-            'json' => [
-                'contents' => [
-                    [
-                        'parts' => [
-                            ['text' => $message]
-                        ]
-                    ]
-                ]
-            ]
-        ]);
-        $result = $rep->toArray();
+        $message = $message.". Evalue ma consommation directement (ne considere pas que tu es dans une conversation classique, tu dois juste fournir les infos d'une maniere structuree et lisible, et ne parle pas de prompt ou quoi tu fourni juste un service integré pour l'utilisateur), ai-je un bon impact ou non à l'environnement ? Avec mes points forts et mes points faibles. Donne des conseils pertinents pour m'améliorer. Met en valeur dans l'affichage mes points négatifs. Ne donne pas de stats et ne redonne pas mes donnees, fais juste une analyse avec mes points forts et mes points faibles (avec des stats si c'est pertinent) et donne des conseils pertinents. Si tu n'as aucune donnée dans ce prompt, invite l'utilisateur à aller dans la rubrique 'saisir vos données de consommation' dans la barre du haut et a rentrer régulièrement ses données de consommation (nourriture, trajets, achats, consommation personnalisée). Dans cette rubrique, il peut rentrer chaque trajet qu'il a fait (km et mode de transport), chaque aliment qu'il, a consommé (en kg), chaque achats qu'il a fait et une section personnalisé ou il rentre les donnees qu'il veut. Les dates que tu recois sont au format annee-mois-jour mais repond au format classique (exemple : 16 janvier 2022)";
+        $rep = $client->request('POST', 'https://api.groq.com/openai/v1/chat/completions', [
+        'headers' => [
+            'Authorization' => 'Bearer ' . $_ENV['GROQ_API_KEY'],
+            'Content-Type'  => 'application/json',
+        ],
+        'json' => [
+            'model' => 'llama-3.3-70b-versatile',
+            'messages' => [
+                ['role' => 'user', 'content' => $message]
+            ],
+        ],
+    ]);
+    
+    $data     = $rep->toArray();
+    $markdown = $data['choices'][0]['message']['content'];
 
-        // 5. On extrait le texte (le chemin dans l'array est un peu long chez Google)
-        $texteGenere = $result['candidates'][0]['content']['parts'][0]['text'];
-
-        $converter = new CommonMarkConverter();
-        $text = $converter->convert($texteGenere)->getContent();
+    $converter = new CommonMarkConverter();
+    $html = $converter->convert($markdown);
 
         return $this->render('suggestions/index.html.twig', [
-            'resultat' => $text,
+            'resultat' => $html,
         ]);
     }
 }
