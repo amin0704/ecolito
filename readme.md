@@ -3,11 +3,11 @@
 Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Panthéon-Sorbonne 2025-26
 
 ### IMPORTANT !
-Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API sur le .env 
+Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API. Les lignes ont été envoyées via discord
 
 
 ### Utilisation
-Vous devez avoir un compte pour acceder au site. Vous pouvez utiliser la page inscription, ou utiliser un compte avec des données deja existantes. Exemple de compte deja existant avec des données : mail : a@gmail.com / mot de passe : aaaaaa (c'est un compte test)
+Vous devez avoir un compte pour acceder au site. Vous pouvez utiliser la page inscription pour creer un compte, ou utiliser un compte avec des données deja existantes. Exemple de compte deja existant avec des données : mail : a@gmail.com / mot de passe : aaaaaa (c'est un compte test)
 
 **Rentrer les donnees**
 Vous pouvez utiliser un des 4 formulaires de l'espace "Saisir vos données de consommation" pour rentrer vos données de consommation, que ce soit un achat (avec le formulaire des achats), un repas consommé (avec le formulaire des consommation de repas), un trajet (avec le formulaire des trajets) ou n'importe quelle autre consommation (via le formulaire : informations de consommation personnalisées). N'hesitez pas a rentrer des details, dans le dernier champ des formulaires, pour toute precision que vous souhaitez apporter sur vos consommations.
