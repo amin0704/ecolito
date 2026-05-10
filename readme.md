@@ -58,8 +58,8 @@ Dans la partie "Conseils personnalisés", on a accés à des suggestions pour am
 ### Questions ?
 Pour toute question, souci ou solicitation lié à ce projet, n'hesitez pas à contacter l'equipe (via Discord ou par nos mails etudiants).
 
-Mail d'Amin : Amin.Harrada@etu.univ-paris1.fr
+Mail Amin HARRADA : Amin.Harrada@etu.univ-paris1.fr
 
-Mail d'Ayoub : Ayoub.Dahbi@etu.univ-paris1.fr
+Mail Ayoub DAHBI : Ayoub.Dahbi@etu.univ-paris1.fr
 
-Mail d'Aylin : Aylin.Danistekin@etu.univ-paris1.fr
+Mail Aylin DANISTEKIN : Aylin.Danistekin@etu.univ-paris1.fr
