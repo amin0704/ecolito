@@ -4,7 +4,7 @@ Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Pant
 
 ### Obtenir le projet
 
-- Cloner le projet : git clone https://github.com/moi/ecolito.git
+- Cloner le projet : git clone https://github.com/amin0704/ecolito.git
 - Construction des images (+ lancement du site) : make build
 - Installation des dependances : make composer-install
   
