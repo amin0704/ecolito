@@ -11,6 +11,7 @@ Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Pant
 - Lancement du site seul (sans construction d'image) : make up (pas la peine si on a fait make build, utile quand on a deja construit les images mais qu'on veut relancer le site a un autre moment)
 
 (Prérequis : avoir installé docker desktop et git)
+site accessible sur localhost une fois lancé
 
 ### IMPORTANT !
 Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API. Les lignes ont été envoyées via discord
