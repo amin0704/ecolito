@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS `dbb2` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `dbb2`;
+CREATE DATABASE IF NOT EXISTS `defaultdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `defaultdb`;
 -- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
 --
--- Host: mysql-2d18551f-web-ac93.e.aivencloud.com    Database: dbb2
+-- Host: mysql-2d18551f-web-ac93.e.aivencloud.com    Database: defaultdb
 -- ------------------------------------------------------
 -- Server version	8.0.45
 
@@ -262,7 +262,7 @@ INSERT INTO `user` VALUES (1,'Dahb','Ayoub','ayda@gmail.com','[\"ROLE_USER\"]','
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'dbb2'
+-- Dumping routines for database 'defaultdb'
 --
 -- SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
