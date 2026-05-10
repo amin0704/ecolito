@@ -40,6 +40,7 @@ Vous pouvez utiliser la page inscription pour creer un compte, ou utiliser un co
 **Rentrer les donnees :**
 
 Vous pouvez utiliser un des 4 formulaires de l'espace "Saisir vos données de consommation" pour rentrer vos données de consommation, que ce soit un achat (avec le formulaire des achats), un repas consommé (avec le formulaire des consommation de repas), un trajet (avec le formulaire des trajets) ou n'importe quelle autre consommation (via le formulaire : informations de consommation personnalisées). 
+
 N'hesitez pas a rentrer des details, dans le dernier champ des formulaires, pour toute precision que vous souhaitez apporter sur vos consommations.
 
 **Consulter ses statistiques :**
@@ -55,6 +56,9 @@ Dans la partie "Conseils personnalisés", on a accés à des suggestions pour am
 
 ### Questions ?
 Pour toute question, souci ou solicitation lié à ce projet, n'hesitez pas à contacter l'equipe (via Discord ou par nos mails etudiants).
+
 Mail d'Amin : Amin.Harrada@etu.univ-paris1.fr
+
 Mail d'Ayoub : Ayoub.Dahbi@etu.univ-paris1.fr
+
 Mail d'Aylin : Aylin.Danistekin@etu.univ-paris1.fr
