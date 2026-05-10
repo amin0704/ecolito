@@ -2,8 +2,31 @@
 ## Projet Ecolito L3 Miage Classique Paris 1
 Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Panthéon-Sorbonne 2025-26
 
+### Obtenir le projet
+
+- Cloner le projet : git clone https://github.com/moi/ecolito.git
+- Construction des images (+ lancement du site) : make build
+- Installation des dependances : make composer-install
+  
+- Lancement du site seul (sans construction d'image) : make up (pas la peine si on a fait make build, utile quand on a deja construit les images mais qu'on veut relancer le site a un autre moment)
+
+(Prérequis : avoir installé docker desktop et git)
+
 ### IMPORTANT !
 Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API. Les lignes ont été envoyées via discord
+
+### L'application
+L'application Ecolito permet d'aider l'utilisateur à ameliorer son impact sur l'environnement, en rentrant sa consommation, suivant ses statistiques et en obtenant des conseils personnalisés.
+
+### Technologies
+Le site a été principalement codé en Symfony.
+Utilisation de Twig pour les rendus visuels. 
+Presence de CSS (+Bootstrap) et de JavaScript. 
+Le service de base de donnée utilisé est un service Cloud (via Aiven). Base de donnée Mysql (nom de la bdd : dbb2). (Les identifiants pour se connecter à cette base de donnée sont envoyés via Discord.)
+L'IA integré est utilisé via l'API Groq, accessible via clé api. (clé envoyée via Discord)
+Le service utilisé pour l'envoi de mails est Brevo. (clé envoyée via Discord)
+
+
 
 
 ### Utilisation
@@ -23,3 +46,6 @@ Dans la partie "Conseils personnalisés", on a accés à des suggestions pour am
 
 ### Questions ?
 Pour toute question, souci ou solicitation lié à ce projet, n'hesitez pas à contacter l'equipe (via Discord ou par nos mails etudiants).
+Mail d'Amin : Amin.Harrada@etu.univ-paris1.fr
+Mail d'Ayoub : Ayoub.Dahbi@etu.univ-paris1.fr
+Mail d'Aylin : Aylin.Danistekin@etu.univ-paris1.fr
