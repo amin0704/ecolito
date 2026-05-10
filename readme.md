@@ -13,6 +13,9 @@ Ceci est le github du Projet Symfony de l'equipe Sharky, L3 Miage Classique Pant
 (Prérequis : avoir installé docker desktop et git)
 site accessible sur localhost une fois lancé
 
+Copie de la base de donnée dans le fichier sql bdd_ecolito (mais sachant que la base de donnée est distante il n'est pas utile)
+Identifiants d'acces a la base de donnée fourni via discord
+
 ### IMPORTANT !
 Avant toute utilisation du site, il est necessaire de modifier le .env en rajoutant les lignes lié au mailer, à la base de donnée et a la clé API. Les lignes ont été envoyées via discord
 
@@ -30,7 +33,7 @@ Le service de base de donnée utilisé est un service Cloud (via Aiven). Base de
 
 L'IA integré est utilisé via l'API Groq, accessible via clé api. (clé envoyée via Discord)
 
-Le service utilisé pour l'envoi de mails est Brevo. (clé envoyée via Discord)
+Le service utilisé pour l'envoi de mails est Brevo.
 
 
 
