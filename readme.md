@@ -25,7 +25,7 @@ Utilisation de Twig pour les rendus visuels.
 
 Presence de CSS (+Bootstrap) et de JavaScript. 
 
-Le service de base de donnée utilisé est un service Cloud (via Aiven). Base de donnée Mysql (nom de la bdd : dbb2). (Les identifiants pour se connecter à cette base de donnée sont envoyés via Discord.)
+Le service de base de donnée utilisé est un service Cloud (via Aiven). Base de donnée Mysql (nom de la bdd : defaultdb). (Les identifiants pour se connecter à cette base de donnée sont envoyés via Discord.)
 
 L'IA integré est utilisé via l'API Groq, accessible via clé api. (clé envoyée via Discord)
 
